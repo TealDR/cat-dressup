@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<title>Test</title>
+
+<style>
+#monca {
+position: absolute;
+top: 250px;
+left: 350px;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<div id="monca"></div>
+
+
+<button onclick="nextImg()">Next</button>
+<button onclick="previousImg()">Previous</button>
+
+</body>
+
+<script>
+var srcthingy = "images/monca"
+var imagenum = 1
+var image = srcthingy + imagenum + ".jpg"
+document.getElementById('monca').innerHTML = '<img src="images/monca' + imagenum + '.jpg" id="imageBox"/>';
+
+
+function nextImg() {
+if (imagenum != 6) {
+	imagenum += 1
+} else {
+	imagenum = 1
+}
+document.getElementById('monca').innerHTML = '<img src="images/monca' + imagenum + '.jpg" id="imageBox"/>'
+}
+
+function previousImg() {
+if (imagenum >= 2) {
+	imagenum -= 1
+} else {
+	imagenum = 6
+}
+document.getElementById('monca').innerHTML = '<img src="images/monca' + imagenum + '.jpg" id="imageBox"/>'
+}
+
+
+
+
+
+
+
+</script>
